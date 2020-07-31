@@ -8,8 +8,8 @@ import ReactHtmlParser from 'react-html-parser';
 import Creator from '../Creator/Creator.js';
 
 class List extends React.Component {
-  state = {
-    columns: this.props.columns || [],
+  state = { //początkowy stan komponentu
+    columns: this.props.columns || [], //jeśli komponent nie otrzmał propsa columns to w this.state.columns będzie pusta tablica
   }
 
   static propTypes = {
