@@ -34,7 +34,7 @@ class Column extends React.Component {
   }
 
   render() {
-    const {title, cards} = this.props;
+    const {title} = this.props;
     console.log('addCard', this.addCard);
 
     return (
