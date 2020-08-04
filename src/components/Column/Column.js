@@ -20,6 +20,7 @@ class Column extends React.Component {
   }
 
   addCard(title) {
+    //console.log('state cards', this.state);
     this.setState(state => (
       {
         cards: [
@@ -27,23 +28,20 @@ class Column extends React.Component {
           {
             key: state.cards.length ? state.cards[state.cards.length-1].key+1 : 0,
             title,
-          }
-        ]
+          },
+        ],
       }  
-    ))
+    ));
   }
 
   render() {
-    const {title} = this.props;
-    console.log('addCard', this.addCard);
-
     return (
       <section className={styles.component}>
         <h3 className={styles.title}>{this.props.title}
           <span className={styles.icon}><Icon name={this.props.icon}/></span>
         </h3>
 
-        {this.props.cards.map(cardData => (
+        {this.state.cards.map(cardData => (
           <Card key={cardData.id} {...cardData} />
         ))}
 
@@ -51,7 +49,7 @@ class Column extends React.Component {
           <Creator text={settings.cardCreatorText} action={title => this.addCard(title)}/>
         </div>
       </section>
-    )
+    );
   }
 }
 
