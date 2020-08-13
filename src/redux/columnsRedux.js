@@ -1,7 +1,10 @@
 import shortid from 'shortid';
 
 // selectors
-export const getColumnsForList = ({columns}, listId) => columns.filter(column => column.listId == listId);
+export const getColumnsForList = ({columns}, listId) => columns.filter(column => {
+  console.log(column, listId);
+  return column.listId == listId;
+});
 
 // action name creator
 const reducerName = 'columns';

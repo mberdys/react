@@ -115,19 +115,19 @@ const columns = [
   },
   {
     id: 'column-2',
-    listId: 'list-1',
+    listId: 'list-2',
     title: 'Movies',
     icon: 'film',
   },
   {
     id: 'column-3',
-    listId: 'list-1',
+    listId: 'list-3',
     title: 'Games',
     icon: 'gamepad',
   },
   {
     id: 'column-4',
-    listId: 'list-2',
+    listId: 'list-4',
     title: 'Strange column',
     icon: 'question',
   },
